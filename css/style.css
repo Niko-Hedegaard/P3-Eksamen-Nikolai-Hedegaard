@@ -6,8 +6,10 @@
     --groen: #0A7968;
 
     /* skriftstørrelser desktop */
+    --w-desk: 120px;
 
     /* skriftstørrelser mobile */
+    --w-mobil: 30px;
 }
 
 
@@ -18,11 +20,11 @@
     font-family: "Inter";
     list-style: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html,
 body {
-    overflow: hidden;
     background-color: var(--hvid);
 }
 
@@ -34,7 +36,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 80px;
+    padding: 0 40px;
     position: fixed;
     z-index: 9000;
 }
@@ -52,6 +54,13 @@ header {
     display: block;
 }
 
+#navactive {
+    color: var(--groen);
+    font-weight: 700;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+}
+
 .nav-bar a {
     list-style: none;
     text-decoration: none;
@@ -60,14 +69,12 @@ header {
     text-transform: uppercase;
     font-size: 12px;
     padding: 5px 15px;
-    border-radius: 7.5px;
     transition: 0.3s;
 }
 
 .nav-bar a:hover {
-    background-color: var(--groen);
-    color: var(--hvid);
-    font-weight: 500;
+    color: var(--groen);
+    font-weight: 700;
 }
 
 .site-logo img {
@@ -90,7 +97,7 @@ header {
 /* header media queries */
 @media only screen and (max-width: 900px) {
     header {
-        padding: 0 30px;
+        padding: 0 var(--w-mobil);
     }
 
     .burgermenu {
@@ -125,6 +132,160 @@ header {
         margin-bottom: 15px;
     }
 
+    #c-knap {
+        background-color: var(--hvid);
+        color: var(--sort);
+    }
+
+    #c-knap:hover {
+        color: var(--groen);
+        background-color: var(--hvid);
+    }
+
 }
 
+
+
+/* Home page */
+
+
 /* hero section */
+.hero {
+    width: 100%;
+    height: 80vh;
+    padding: 0 var(--w-mobil);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+h1 {
+    font-size: 42.5px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--sort);
+}
+
+#groentekst {
+    color: var(--groen);
+}
+
+.btn {
+    padding: 10px 30px;
+    width: fit-content;
+    border-width: 0;
+    background-color: var(--sort);
+    transition: 0.3s;
+    color: var(--hvid);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: var(--groen);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* lidt om mig section */
+.media-tekst {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    height: auto;
+    padding: 50px var(--w-mobil);
+}
+
+.billede {
+    width: 100%;
+    height: auto;
+}
+
+.billede img {
+    width: 100%;
+    height: auto;
+}
+
+.tekst-h {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    color: var(--sort);
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--sort);
+}
+
+.tekst-h button {
+    align-self: center;
+}
+
+
+/* media query til home page */
+@media only screen and (min-width: 900px) {
+    .hero {
+        width: 100%;
+        height: 100vh;
+        padding: 0 250px;
+        gap: 70px;
+    }
+
+    h1 {
+        font-size: 91.55px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--sort);
+    }
+
+    h2 {
+        font-size: 73.24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        color: var(--sort);
+        text-align: left;
+    }
+
+    .media-tekst {
+        flex-direction: row;
+        gap: 80px;
+        padding: 100px var(--w-desk);
+    }
+
+    .tekst-h {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
