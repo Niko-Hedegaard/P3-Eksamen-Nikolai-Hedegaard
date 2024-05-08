@@ -1,0 +1,130 @@
+/* variabler */
+:root {
+    /* farver */
+    --hvid: #EAEAEA;
+    --sort: #3F4045;
+    --groen: #0A7968;
+
+    /* skriftstørrelser desktop */
+
+    /* skriftstørrelser mobile */
+}
+
+
+/* HTML og body kode der har effekt på alle elementer */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow: hidden;
+    background-color: var(--hvid);
+}
+
+
+/* Header og nav menu kode */
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+    position: fixed;
+    z-index: 9000;
+}
+
+.burgermenu {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-bar ul li {
+    display: block;
+}
+
+.nav-bar a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--sort);
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 5px 15px;
+    border-radius: 7.5px;
+    transition: 0.3s;
+}
+
+.nav-bar a:hover {
+    background-color: var(--groen);
+    color: var(--hvid);
+    font-weight: 500;
+}
+
+.site-logo img {
+    width: 50px;
+    margin-top: -10px;
+    height: auto;
+    position: absolute;
+    z-index: 9001;
+}
+
+#c-knap {
+    background-color: var(--sort);
+    color: var(--hvid);
+}
+
+#c-knap:hover {
+    background-color: var(--groen);
+}
+
+/* header media queries */
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+
+    .burgermenu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-bar {
+        position: absolute;
+        height: 0;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: var(--hvid);
+        transition: 0.3s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active {
+        height: 220px;
+    }
+
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        text-align: center;
+        margin: 40px auto;
+    }
+
+    .nav-bar ul li {
+        margin-bottom: 15px;
+    }
+
+}
+
+/* hero section */

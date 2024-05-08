@@ -3,13 +3,47 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Nikolai Hedegaard Hansen</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="scripts/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <header>
+        <div class="site-logo">
+            <img src="images/logo.svg" href="#" alt="Nikolai Hedegaard Hansens portfolio logo">
+        </div>
+        <div class="burgermenu">
+            <img src="images/burger-menu.svg">
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="" id="active">Home</a>
+                </li>
+                <li>
+                    <a href="">Projects</a>
+                </li>
+                <li>
+                    <a href="">About me</a>
+                </li>
+                <li>
+                    <a href="" id="c-knap">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- script til header -->
+    <script>
+        burgermenu = document.querySelector(".burgermenu");
+        burgermenu.onclick = function () {
+            navbar = document.querySelector(".nav-bar");
+            navbar.classList.toggle("active");
+        }
+    </script>
 </body>
 
 <footer>
