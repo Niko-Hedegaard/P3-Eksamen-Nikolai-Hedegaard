@@ -39,6 +39,7 @@ header {
     padding: 0 40px;
     position: fixed;
     z-index: 9000;
+    background-color: var(--hvid);
 }
 
 .burgermenu {
@@ -171,7 +172,7 @@ h1 {
     color: var(--sort);
 }
 
-#groentekst {
+.groentekst {
     color: var(--groen);
 }
 
@@ -221,6 +222,8 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 h2 {
@@ -230,7 +233,6 @@ h2 {
     line-height: normal;
     text-transform: uppercase;
     color: var(--sort);
-    text-align: center;
 }
 
 p {
@@ -241,9 +243,56 @@ p {
     color: var(--sort);
 }
 
-.tekst-h button {
-    align-self: center;
+/* Quote section */
+.quote-sec {
+    padding: 100px var(--w-mobil);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+h4 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--sort);
+}
+
+.quote-sec h4 {
+    text-align: right;
+}
+
+/* Galleri section */
+.galleri {
+    display: flex;
+    flex-direction: column;
+    padding: 100px var(--w-mobil);
+    width: 100%;
+    height: auto;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+}
+
+.galleri-boks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+}
+
+.galleri-billede {
+    width: 100%;
+    height: auto;
+}
+
+.galleri-billede img {
+    width: 100%;
+    height: auto;
+}
+
 
 
 /* media query til home page */
@@ -257,22 +306,14 @@ p {
 
     h1 {
         font-size: 91.55px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-transform: uppercase;
-        text-align: center;
-        color: var(--sort);
     }
 
     h2 {
         font-size: 73.24px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-transform: uppercase;
-        color: var(--sort);
-        text-align: left;
+    }
+
+    h4 {
+        font-size: 46.88px;
     }
 
     .media-tekst {
@@ -286,6 +327,27 @@ p {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        align-items: normal;
+    }
+
+    p {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        color: var(--sort);
+    }
+
+    .btn {
+        padding: 20px 60px;
+        font-size: 16px;
+    }
+
+    .quote-sec {
+        padding: 200px var(--w-desk);
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
     }
 
 }

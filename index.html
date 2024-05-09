@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Nikolai Hedegaard Hansen</title>
+    <link rel="icon" type="image/favicon" href="images/favicon.svg">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +14,7 @@
 <body>
     <header>
         <div class="site-logo">
-            <img src="images/logo.svg" alt="Nikolai Hedegaard Hansens portfolio logo">
+            <a href="#"><img src="images/logo.svg" alt="Nikolai Hedegaard Hansens portfolio logo"></a>
         </div>
         <div class="burgermenu">
             <img src="images/burger-menu.svg" alt="Burger menu">
@@ -47,7 +48,7 @@
 
     <!-- Hero section -->
     <section class="hero">
-        <h1>Watch where the <span id="groentekst">magic</span> happens!</h1>
+        <h1>Watch where the <span class="groentekst">magic</span> happens!</h1>
         <button class="btn">Show me the magic</button>
     </section>
 
@@ -57,14 +58,41 @@
             <img src="images/nikolai-hedegaard.jpg" alt="Billede af Nikolai Hedegaard Hansen">
         </div>
         <div class="tekst-h">
-            <h2>Lidt om mig</h2>
+            <h2>Hello there!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                 deserunt mollit anim id est laborum.</p>
-            <button class="btn">Læs mere om mig</button>
+            <button class="btn" href="pages/">Learn more about me</button>
         </div>
+    </section>
+
+    <!-- quote section -->
+    <section class="quote-sec">
+        <h2>“Everything is designed. <br>Few things are designed <span class="groentekst">well</span>.”</h2>
+        <h4><i>- Brian Reed</i></h4>
+    </section>
+
+    <!-- Galleri section -->
+    <section class="galleri">
+        <h2>Watch the magic <br>with your <span class="groentekst">own</span> eyes</h2>
+        <div class="galleri-boks">
+            <div class="galleri-billede">
+                <a href="#"><img src="images/dfl-ar-koncept.jpg" alt="Den Fynske Landsby AR-koncept til museet"></a>
+            </div>
+            <div class="galleri-billede">
+                <a href="#"><img src="images/redesign-af-aaruptennis.jpg"
+                        alt="Redesign af Aarup tennisklubs hjemmeside"></a>
+            </div>
+            <div class="galleri-billede">
+                <a href="#"><img src="images/rec-bog.jpg" alt="Brand bog til urmærket REC Watches"></a>
+            </div>
+            <div class="galleri-billede">
+                <a href="#"><img src="images/ywd-magasin.jpg" alt="Your Daily Dose magasin"></a>
+            </div>
+        </div>
+        <button class="btn" href="pages/">I want to see more</button>
     </section>
 </body>
 
