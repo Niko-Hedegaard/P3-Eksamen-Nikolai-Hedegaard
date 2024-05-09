@@ -20,7 +20,7 @@
     font-family: "Inter";
     list-style: none;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    /*    scroll-behavior: smooth; */
 }
 
 html,
@@ -32,7 +32,7 @@ body {
 /* Header og nav menu kode */
 header {
     width: 100%;
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,10 +79,8 @@ header {
 }
 
 .site-logo img {
-    width: 50px;
-    margin-top: -10px;
+    width: 35px;
     height: auto;
-    position: absolute;
     z-index: 9001;
 }
 
@@ -145,6 +143,45 @@ header {
 
 }
 
+/* footer */
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 50px var(--w-mobil);
+    background-color: var(--sort);
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer p {
+    color: var(--hvid);
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 15px;
+}
+
+.some-svg {
+    width: 30px;
+    height: auto;
+    fill: var(--hvid);
+    transition-duration: 0.3s;
+}
+
+.some-svg:hover {
+    fill: var(--groen);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 900px) {
+    footer {
+        padding: 50px var(--w-desk);
+    }
+}
 
 
 /* Home page */
@@ -281,6 +318,7 @@ h4 {
     width: 100%;
     height: auto;
     gap: 20px;
+    align-items: center;
 }
 
 .galleri-billede {
@@ -289,8 +327,56 @@ h4 {
 }
 
 .galleri-billede img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+}
+
+/* Kontakt formular */
+.kontakt-sec {
+    display: flex;
+    width: 100%;
+    padding: 100px var(--w-mobil);
+    height: auto;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.kontakt-left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.kontakt-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+}
+
+.kontakt-input {
+    width: 100%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--sort);
+    background-color: var(--hvid);
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.kontakt-input:hover {
+    border-color: var(--groen);
+}
+
+#kontakt-besked {
+    resize: none;
+    height: 150px;
+}
+
+#btn-kontakt {
+    margin-top: 10px;
 }
 
 
@@ -339,7 +425,7 @@ h4 {
     }
 
     .btn {
-        padding: 20px 60px;
+        padding: 15px 60px;
         font-size: 16px;
     }
 
@@ -348,6 +434,54 @@ h4 {
         display: flex;
         flex-direction: column;
         gap: 40px;
+    }
+
+    .galleri {
+        display: flex;
+        padding: 100px var(--w-desk);
+        gap: 40px;
+    }
+
+    .galleri-boks {
+        display: flex;
+        flex-flow: row wrap;
+
+        gap: 20px;
+    }
+
+    .galleri-billede {
+        flex: 1 1 49%;
+        height: auto;
+    }
+
+    .kontakt-sec {
+        display: flex;
+        width: 100%;
+        padding: 100px var(--w-desk);
+        height: auto;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .kontakt-left {
+        display: flex;
+        flex: 1 1 49%;
+        flex-direction: column;
+        text-align: left;
+        gap: 10px;
+    }
+
+    .kontakt-right {
+        display: flex;
+        flex: 1 1 49%;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        align-items: flex-end;
+    }
+
+    #btn-kontakt {
+        margin-top: 10px;
     }
 
 }
