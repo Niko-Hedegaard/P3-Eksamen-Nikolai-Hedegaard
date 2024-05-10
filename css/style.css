@@ -23,7 +23,7 @@
     font-family: "Inter";
     list-style: none;
     box-sizing: border-box;
-    /*    scroll-behavior: smooth; */
+    scroll-behavior: smooth;
 }
 
 html,
@@ -74,6 +74,7 @@ header {
     font-size: 14px;
     padding: 5px 15px;
     transition: 0.3s;
+    letter-spacing: 1px;
 }
 
 .nav-bar a:hover {
@@ -286,6 +287,7 @@ footer p {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    background-image: url('https://prod.spline.design/oYHfO4yOCwYu7bUO/scene.splinecode');
 }
 
 h1 {
@@ -315,6 +317,7 @@ h1 {
     line-height: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .btn:hover {

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Nikolai Hedegaard Hansen</title>
+    <link rel="icon" type="image/favicon" href="images/favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="site-logo">
+            <a href="../index.html"><img src="../images/logo.svg" alt="Nikolai Hedegaard Hansens portfolio logo"></a>
+            <p>Nikolai Hedegaard Hansen <br><span class="groentekst">Portfolio</span></p>
+        </div>
+        <div class="burgermenu">
+            <img src="../images/burger-menu.svg" alt="Burger menu">
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="../index.html">Forside</a>
+                </li>
+                <li>
+                    <a href="projekter.html">Projekter</a>
+                </li>
+                <li>
+                    <a href="about-me.html" id="navactive">Om mig</a>
+                </li>
+                <li>
+                    <a href="" id="c-knap">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- script til header -->
+    <script>
+        burgermenu = document.querySelector(".burgermenu");
+        burgermenu.onclick = function () {
+            navbar = document.querySelector(".nav-bar");
+            navbar.classList.toggle("active");
+        }
+    </script>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <h1>Projekter</h1>
+    </section>
+
+    <!-- DFL projekt -->
+    <section class="media-tekst">
+        <div class="billede">
+            <img src="../images/dfl-ar-koncept.jpg" alt="Den Fynske Landsby AR-koncept til museet">
+        </div>
+        <div class="tekst-h">
+            <h2>DFL AR-koncept</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.</p>
+            <button class="btn" href="pages/">Se magien bag</button>
+        </div>
+    </section>
+
+</body>
+
+<footer>
+    <p class="copyright">&copy; 2024 Nikolai Hedegaard Hansen</p>
+    <div class="social-icons">
+        <!-- FB ikon -->
+        <a class="fa fa-facebook" href="https://www.facebook.com/profile.php?id=100009071329935" target="_blank">
+        </a>
+        <!-- IG ikon -->
+        <a class="fa fa-instagram" href="https://www.instagram.com/nikolai_hedegaard/" target="_blank">
+        </a>
+        <!-- linkedin ikon -->
+        <a class="fa fa-linkedin" href="https://www.linkedin.com/in/nikolai-hedegaard-hansen-a55377236" target="_blank">
+        </a>
+    </div>
+</footer>
+
+</html>
