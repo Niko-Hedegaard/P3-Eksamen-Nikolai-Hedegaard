@@ -33,7 +33,7 @@
                     <a href="pages/about-me.html">Om mig</a>
                 </li>
                 <li>
-                    <a href="" id="c-knap">Kontakt</a>
+                    <a href="#kontakt-side" id="c-knap">Kontakt</a>
                 </li>
             </ul>
         </nav>
@@ -51,7 +51,7 @@
     <!-- Hero section -->
     <section class="hero">
         <h1>Watch where the <span class="groentekst">magic</span> happens!</h1>
-        <a class="btn" href="pages/projekter.html">Show me the magic</a>
+        <a class="btn" href="pages/projekter.html#dfl-section">Show me the magic</a>
     </section>
 
     <!-- lidt om mig section -->
@@ -60,7 +60,7 @@
             <img src="images/nikolai-hedegaard.jpg" alt="Billede af Nikolai Hedegaard Hansen">
         </div>
         <div class="tekst-h">
-            <h2>Hello there!</h2>
+            <h2>Velkommen til!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -72,13 +72,13 @@
 
     <!-- quote section -->
     <section class="quote-sec">
-        <h2>“Everything is designed. <br>Few things are designed <span class="groentekst">well</span>.”</h2>
+        <h2>“Everything is designed. <br>Few things are designed well.”</h2>
         <h4><i>- Brian Reed</i></h4>
     </section>
 
     <!-- Galleri section -->
     <section class="galleri">
-        <h2>Watch the magic <br>with your <span class="groentekst">own</span> eyes</h2>
+        <h2>Se magien med dine <span class="groentekst">egne</span> øjne</h2>
         <div class="galleri-boks">
             <div class="galleri-billede">
                 <a href="pages/projekter.html#dfl-section"><img src="images/dfl-ar-koncept.jpg"
@@ -101,19 +101,22 @@
     </section>
 
     <!-- kontakt formular -->
-    <section class="kontakt-sec">
-        <div class="kontakt-left">
-            <h2>Contact me</h2>
-            <p>Er du klar på at få et magisk touch på dit brand, så kontakt mig her!</p>
+    <section class="kontakt-sec" id="kontakt-side">
+        <h2>Kontakt mig</h2>
+        <div class="kontakt-grid">
+            <div class="kontakt-left">
+                <p>Kontakt mig hvis i leder efter en kreativ sjæl der har forståelse for godt design. Hvis i værdsætter
+                    kvalitet og kreativitet, så lad os tale sammen!</p>
+            </div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="kontakt-right">
+                <input type="hidden" name="access_key" value="e7dca854-534c-4f0a-af8e-36e2c187b734">
+                <input type="text" name="name" placeholder="Fulde navn ..." class="kontakt-input" required>
+                <input type="email" name="email" placeholder="Email ..." class="kontakt-input" required>
+                <textarea name="message" placeholder="Besked ..." class="kontakt-input" id="kontakt-besked"
+                    required></textarea>
+                <button class="btn" id="btn-kontakt" type="submit">Send</button>
+            </form>
         </div>
-        <form action="https://api.web3forms.com/submit" method="POST" class="kontakt-right">
-            <input type="hidden" name="access_key" value="e7dca854-534c-4f0a-af8e-36e2c187b734">
-            <input type="text" name="name" placeholder="Your name ..." class="kontakt-input" required>
-            <input type="email" name="email" placeholder="Your email ..." class="kontakt-input" required>
-            <textarea name="message" placeholder="Your message ..." class="kontakt-input" id="kontakt-besked"
-                required></textarea>
-            <button class="btn" id="btn-kontakt" type="submit">Submit</button>
-        </form>
     </section>
 </body>
 
