@@ -378,14 +378,9 @@ p {
     flex-direction: column;
     gap: 20px;
     background-color: var(--sort);
-    /*    background-image: url('../images/polar-lights.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; */
 }
 
-.quote-sec h2 {
+.scroll-reveal {
     color: var(--hvid);
 }
 
@@ -425,6 +420,11 @@ h4 {
 .galleri-billede {
     width: 100%;
     height: auto;
+    transition: 0.3s;
+}
+
+.galleri-billede:hover {
+    scale: 1.03;
 }
 
 .galleri-billede img {
