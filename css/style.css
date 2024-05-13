@@ -4,6 +4,7 @@
     --hvid: #EAEAEA;
     --sort: #3F4045;
     --groen: #0A7968;
+    --transp: rgba(0 0 0 0);
 
     /* skriftstørrelser desktop */
     --w-desk: 15%;
@@ -126,42 +127,59 @@ header {
     .nav-bar {
         position: absolute;
         height: 0;
-        top: 80px;
+        top: 100px;
         left: 0;
         right: 0;
         width: 100vw;
-        background-color: var(--hvid);
         transition: 0.3s;
+        background-color: rgba(234, 234, 234, .45);
+        backdrop-filter: blur(45px);
         overflow: hidden;
     }
 
+    #navactive {
+        color: var(--hvid);
+        font-weight: 700;
+        background-color: var(--groen);
+        border: none;
+    }
+
     .nav-bar a {
-        font-size: 18px;
+        font-size: 24px;
+        font-weight: 400;
+        padding: 10px 40px;
+    }
+
+    .nav-bar a:hover {
+        color: var(--hvid);
+        font-weight: 700;
+        background-color: var(--groen);
     }
 
     .nav-bar.active {
-        height: 300px;
+        height: 100vh;
     }
 
     .nav-bar ul {
-        display: block;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: fit-content;
         text-align: center;
-        margin: 40px auto;
-    }
-
-    .nav-bar ul li {
-        margin-bottom: 40px;
+        margin: auto;
+        gap: 60px;
     }
 
     #c-knap {
-        background-color: var(--hvid);
+        background-color: rgba(234, 234, 234, 0);
         color: var(--sort);
     }
 
     #c-knap:hover {
-        color: var(--groen);
-        background-color: var(--hvid);
+        color: var(--hvid);
+        background-color: var(--groen);
     }
 
 }
@@ -179,24 +197,49 @@ header {
     .nav-bar {
         position: absolute;
         height: 0;
-        top: 80px;
+        top: 100px;
         left: 0;
         right: 0;
         width: 100vw;
-        background-color: var(--hvid);
         transition: 0.3s;
+        background-color: rgba(234, 234, 234, .45);
+        backdrop-filter: blur(45px);
         overflow: hidden;
     }
 
     .nav-bar.active {
-        height: 220px;
+        height: 100vh;
+    }
+
+    #navactive {
+        color: var(--hvid);
+        font-weight: 700;
+        background-color: var(--groen);
+        border: none;
+    }
+
+    .nav-bar a {
+        font-size: 24px;
+        font-weight: 400;
+        padding: 10px 40px;
+    }
+
+    .nav-bar a:hover {
+        color: var(--hvid);
+        font-weight: 700;
+        background-color: var(--groen);
     }
 
     .nav-bar ul {
-        display: block;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: fit-content;
         text-align: center;
-        margin: 40px auto;
+        margin: auto;
+        gap: 60px;
     }
 
     .nav-bar ul li {
@@ -204,13 +247,13 @@ header {
     }
 
     #c-knap {
-        background-color: var(--hvid);
+        background-color: var(--transp);
         color: var(--sort);
     }
 
     #c-knap:hover {
-        color: var(--groen);
-        background-color: var(--hvid);
+        background-color: var(--groen);
+        color: var(--hvid);
     }
 }
 
@@ -380,8 +423,15 @@ p {
     background-color: var(--sort);
 }
 
-.scroll-reveal {
-    color: var(--hvid);
+.scroll-reveal>span {
+    display: inline;
+    color: rgba(234, 234, 234, 1);
+    /*background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-image: linear-gradient(90deg, #eaeaea, #eaeaea);
+    animation: scroll-reveal linear forwards;
+    animation-timeline: view();*/
 }
 
 h4 {
@@ -799,5 +849,11 @@ h4 {
     to {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+@keyframes scroll-reveal {
+    to {
+        background-size: 100% 100%;
     }
 }
