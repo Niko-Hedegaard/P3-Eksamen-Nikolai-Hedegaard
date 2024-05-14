@@ -3,8 +3,8 @@
     /* farver */
     --hvid: #EAEAEA;
     --sort: #3F4045;
-    --groen: #0A7968;
-    --transp: rgba(0 0 0 0);
+    --blaa: #0000FF;
+    --groen-gammel: #0A7968;
 
     /* skriftstørrelser desktop */
     --w-desk: 15%;
@@ -48,6 +48,14 @@ header {
 
 .burgermenu {
     display: none;
+    font-size: 30px;
+    color: var(--sort);
+    transition: 0.3s;
+}
+
+.burgermenu:hover {
+    color: var(--blaa);
+    cursor: pointer;
 }
 
 .nav-bar ul {
@@ -60,7 +68,7 @@ header {
 }
 
 #navactive {
-    color: var(--groen);
+    color: var(--blaa);
     font-weight: 700;
     border-style: solid;
     border-width: 0 0 2px 0;
@@ -79,8 +87,12 @@ header {
 }
 
 .nav-bar a:hover {
-    color: var(--groen);
+    color: var(--blaa);
     font-weight: 700;
+}
+
+.nav-bar.active {
+    height: 100vh;
 }
 
 .site-logo {
@@ -110,7 +122,7 @@ header {
 }
 
 #c-knap:hover {
-    background-color: var(--groen);
+    background-color: var(--blaa);
 }
 
 /* header media queries */
@@ -121,7 +133,6 @@ header {
 
     .burgermenu {
         display: block;
-        cursor: pointer;
     }
 
     .nav-bar {
@@ -132,36 +143,30 @@ header {
         right: 0;
         width: 100vw;
         transition: 0.3s;
-        background-color: rgba(234, 234, 234, .45);
-        backdrop-filter: blur(45px);
+        background-color: var(--hvid);
         overflow: hidden;
     }
 
     #navactive {
         color: var(--hvid);
         font-weight: 700;
-        background-color: var(--groen);
+        background-color: var(--blaa);
         border: none;
     }
 
     .nav-bar a {
         font-size: 24px;
-        font-weight: 400;
         padding: 10px 40px;
     }
 
     .nav-bar a:hover {
         color: var(--hvid);
         font-weight: 700;
-        background-color: var(--groen);
-    }
-
-    .nav-bar.active {
-        height: 100vh;
+        background-color: var(--blaa);
     }
 
     .nav-bar ul {
-        height: 100%;
+        height: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -179,7 +184,7 @@ header {
 
     #c-knap:hover {
         color: var(--hvid);
-        background-color: var(--groen);
+        background-color: var(--blaa);
     }
 
 }
@@ -191,7 +196,6 @@ header {
 
     .burgermenu {
         display: block;
-        cursor: pointer;
     }
 
     .nav-bar {
@@ -202,20 +206,8 @@ header {
         right: 0;
         width: 100vw;
         transition: 0.3s;
-        background-color: rgba(234, 234, 234, .45);
-        backdrop-filter: blur(45px);
+        background-color: var(--hvid);
         overflow: hidden;
-    }
-
-    .nav-bar.active {
-        height: 100vh;
-    }
-
-    #navactive {
-        color: var(--hvid);
-        font-weight: 700;
-        background-color: var(--groen);
-        border: none;
     }
 
     .nav-bar a {
@@ -227,7 +219,14 @@ header {
     .nav-bar a:hover {
         color: var(--hvid);
         font-weight: 700;
-        background-color: var(--groen);
+        background-color: var(--blaa);
+    }
+
+    #navactive {
+        color: var(--hvid);
+        font-weight: 700;
+        background-color: var(--blaa);
+        border: none;
     }
 
     .nav-bar ul {
@@ -247,13 +246,14 @@ header {
     }
 
     #c-knap {
-        background-color: var(--transp);
+        background-color: rgba(0, 0, 0, 0);
         color: var(--sort);
     }
 
     #c-knap:hover {
-        background-color: var(--groen);
+        background-color: var(--blaa);
         color: var(--hvid);
+
     }
 }
 
@@ -292,7 +292,7 @@ footer p {
 }
 
 .social-icons a:hover {
-    background-color: var(--groen);
+    background-color: var(--blaa);
     cursor: pointer;
 }
 
@@ -332,6 +332,12 @@ footer p {
     gap: 30px;
 }
 
+.hero>a {
+    animation: fadein-rise 1.5s forwards ease;
+    animation-delay: .5s;
+    opacity: 0;
+}
+
 h1 {
     font-size: 42.5px;
     font-style: normal;
@@ -340,10 +346,31 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     color: var(--sort);
+    display: inline-block;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: boxreveal 0.4s forwards ease;
+    animation-delay: 0.3s;
+    pointer-events: none;
 }
 
-.groentekst {
-    color: var(--groen);
+h1:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--blaa);
+    transform-origin: right;
+    transition: 0.5s;
+    animation: boxreveal 0.4s reverse forwards ease;
+    animation-delay: 0.7s;
+}
+
+.blaatekst {
+    color: var(--blaa);
+    text-transform: uppercase;
 }
 
 .btn {
@@ -363,7 +390,7 @@ h1 {
 }
 
 .btn:hover {
-    background-color: var(--groen);
+    background-color: var(--blaa);
     cursor: pointer;
     font-weight: 700;
 }
@@ -423,15 +450,9 @@ p {
     background-color: var(--sort);
 }
 
-.scroll-reveal>span {
+.scroll-reveal {
     display: inline;
     color: rgba(234, 234, 234, 1);
-    /*background-clip: text;
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    background-image: linear-gradient(90deg, #eaeaea, #eaeaea);
-    animation: scroll-reveal linear forwards;
-    animation-timeline: view();*/
 }
 
 h4 {
@@ -522,10 +543,12 @@ h4 {
     background-color: var(--hvid);
     padding: 15px;
     transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .kontakt-input:hover {
-    border-color: var(--groen);
+    border-color: var(--blaa);
 }
 
 #kontakt-besked {
@@ -828,9 +851,9 @@ h4 {
 /* Keyframe animations */
 @keyframes fadein-rise {
     from {
-        transform: translateY(80px);
+        transform: translateY(50px);
         opacity: 0;
-        scale: 90%;
+        scale: 95%;
     }
 
     to {
@@ -855,5 +878,15 @@ h4 {
 @keyframes scroll-reveal {
     to {
         background-size: 100% 100%;
+    }
+}
+
+@keyframes boxreveal {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
     }
 }

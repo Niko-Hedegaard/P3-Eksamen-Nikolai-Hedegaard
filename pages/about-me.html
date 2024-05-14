@@ -10,16 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3cffa401ab.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <div class="site-logo">
             <a href="../index.html"><img src="../images/logo.svg" alt="Nikolai Hedegaard Hansens portfolio logo"></a>
-            <p>Nikolai Hedegaard Hansen <br><span class="groentekst">Portfolio</span></p>
+            <p>Nikolai Hedegaard Hansen <br><span class="blaatekst">Portfolio</span></p>
         </div>
         <div class="burgermenu">
-            <img src="../images/burger-menu.svg" alt="Burger menu">
+            <i class="fa-solid fa-bars"></i>
         </div>
         <nav class="nav-bar">
             <ul>
@@ -39,22 +40,13 @@
         </nav>
     </header>
 
-    <!-- script til header -->
-    <script>
-        burgermenu = document.querySelector(".burgermenu");
-        burgermenu.onclick = function () {
-            navbar = document.querySelector(".nav-bar");
-            navbar.classList.toggle("active");
-        }
-    </script>
-
     <!-- Læs mere om mig section -->
     <section class="media-tekst-hero">
         <div class="billede">
             <img src="../images/nikolai-hedegaard.jpg" alt="Billede af Nikolai Hedegaard Hansen">
         </div>
         <div class="tekst-h-hero">
-            <h1>Hvem er <span class="groentekst">Nikolai</span>?</h1>
+            <h1>Hvem er <span class="blaatekst">Nikolai</span>?</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -65,7 +57,7 @@
 
     <!-- Kompetence section -->
     <section class="kompetencer">
-        <h2>Mine <span class="groentekst">kompetencer</span></h2>
+        <h2>Mine <span class="blaatekst">kompetencer</span></h2>
         <div class="komp-gall">
             <div class="komp-elem">
                 <img src="../images/ikon-design.svg" alt="Design kompetence ikon">
@@ -96,19 +88,20 @@
 
     <!-- kontakt formular -->
     <section class="kontakt-sec" id="kontakt-side">
-        <h2>Kontakt mig</h2>
+        <h2>Get in touch</h2>
         <div class="kontakt-grid">
             <div class="kontakt-left">
-                <p>Kontakt mig hvis i leder efter en kreativ sjæl der har forståelse for godt design. Hvis i værdsætter
-                    kvalitet og kreativitet, så lad os tale sammen!</p>
+                <p>Looking for a designer dedicated to elegance and perfection, through Danish design flair? Let me
+                    enhance your team and elevate your brand with a touch of Danish design. Contact me today, and
+                    together we can achieve greatness!</p>
             </div>
             <form action="https://api.web3forms.com/submit" method="POST" class="kontakt-right">
                 <input type="hidden" name="access_key" value="e7dca854-534c-4f0a-af8e-36e2c187b734">
-                <input type="text" name="name" placeholder="Fulde navn ..." class="kontakt-input" required>
-                <input type="email" name="email" placeholder="Email ..." class="kontakt-input" required>
-                <textarea name="message" placeholder="Besked ..." class="kontakt-input" id="kontakt-besked"
+                <input type="text" name="name" placeholder="Your Full Name ..." class="kontakt-input" required>
+                <input type="email" name="email" placeholder="Your Email ..." class="kontakt-input" required>
+                <textarea name="message" placeholder="Message ..." class="kontakt-input" id="kontakt-besked"
                     required></textarea>
-                <button class="btn" id="btn-kontakt" type="submit">Send</button>
+                <button class="btn" id="btn-kontakt" type="submit">Submit</button>
             </form>
         </div>
     </section>
@@ -128,6 +121,8 @@
             </a>
         </div>
     </footer>
+
+    <script type="text/javascript" src="../scripts/script.js"></script>
 </body>
 
 </html>
