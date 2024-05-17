@@ -30,6 +30,7 @@
 html,
 body {
     background-color: var(--hvid);
+    font-size: 14px;
 }
 
 
@@ -80,7 +81,7 @@ header {
     color: var(--sort);
     font-weight: 300;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 0.833rem;
     padding: 5px 15px;
     transition: 0.3s;
     letter-spacing: 1px;
@@ -263,13 +264,14 @@ footer {
     display: flex;
     flex-direction: row;
     padding: 50px var(--w-mobil);
-    background-color: var(--sort);
+    background-color: var(--blaa);
     align-items: center;
     justify-content: space-between;
 }
 
 footer p {
     color: var(--hvid);
+    font-size: 0.833rem;
 }
 
 .social-icons {
@@ -283,8 +285,8 @@ footer p {
     padding: 7.5px;
     font-size: 15px;
     text-decoration: none;
-    background: var(--hvid);
-    color: var(--sort);
+    background: var(--blaa);
+    color: var(--hvid);
     border-radius: 50px;
     width: 30px;
     text-align: center;
@@ -292,7 +294,8 @@ footer p {
 }
 
 .social-icons a:hover {
-    background-color: var(--blaa);
+    background-color: var(--hvid);
+    color: var(--blaa);
     cursor: pointer;
 }
 
@@ -380,7 +383,7 @@ h1:before {
     background-color: var(--sort);
     transition: 0.3s;
     color: var(--hvid);
-    font-size: 10px;
+    font-size: 0.833rem;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -447,7 +450,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: var(--sort);
+    background-color: var(--blaa);
 }
 
 .scroll-reveal {
@@ -527,6 +530,51 @@ h4 {
     gap: 10px;
 }
 
+.kontakt-infoboks {
+    display: flex;
+    flex-flow: row;
+    justify-content: left;
+    gap: 25px;
+    margin: 15px 0;
+}
+
+.kontakt-info {
+    display: flex;
+    gap: 7.5px;
+    font-size: 0.833rem;
+    align-items: center;
+}
+
+.kontakt-info>i {
+    color: var(--blaa);
+    font-size: 1rem;
+}
+
+.kontakt-info>a {
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 1px;
+    color: var(--sort);
+    transform-origin: left;
+    transition: 0.3s;
+}
+
+.kontakt-info>a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -2px;
+    border-bottom: 2px solid var(--blaa);
+    transition: right 0.3s ease;
+}
+
+.kontakt-info>a:hover::after {
+    transition-delay: 0.2s;
+    right: 0;
+}
+
 .kontakt-right {
     display: flex;
     flex-direction: column;
@@ -543,8 +591,6 @@ h4 {
     background-color: var(--hvid);
     padding: 15px;
     transition: 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .kontakt-input:hover {
@@ -572,6 +618,26 @@ h4 {
     padding: 100px var(--w-mobil);
 }
 
+.media-tekst-hero>.billede {
+    position: relative;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: boxreveal 0.4s forwards ease;
+    animation-delay: 0.3s;
+}
+
+.media-tekst-hero>.billede::before {
+    content: '';
+    inset: 0;
+    position: absolute;
+    background: var(--blaa);
+    transform-origin: right;
+    animation: fadeout 0.5s forwards linear;
+    animation-delay: 0.7s;
+    width: 100%;
+    height: 100%;
+}
+
 .tekst-h-hero {
     width: 100%;
     display: flex;
@@ -579,6 +645,12 @@ h4 {
     gap: 20px;
     justify-content: center;
     align-items: center;
+}
+
+.tekst-h-hero>p {
+    opacity: 0;
+    animation: fadein 1s forwards ease;
+    animation-delay: 0.3s;
 }
 
 .kompetencer {
@@ -614,9 +686,111 @@ h4 {
 }
 
 
+/* media query til tablet */
+@media only screen and (min-width: 700px) and (max-width: 1199px) {
 
-/* media query til home page */
+    html,
+    body {
+        background-color: var(--hvid);
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 3.25rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 38px;
+    }
+
+    .media-tekst {
+        gap: 80px;
+        padding: 100px var(--w-tablet);
+    }
+
+    .tekst-h {
+        width: 100%;
+        gap: 40px;
+    }
+
+    .btn {
+        padding: 15px 60px;
+        font-size: 0.833rem;
+    }
+
+    .quote-sec {
+        padding: 200px var(--w-tablet);
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .galleri {
+        padding: 100px var(--w-tablet);
+        gap: 40px;
+    }
+
+    .kontakt-sec {
+        display: flex;
+        width: 100%;
+        padding: 100px var(--w-tablet);
+        gap: 40px;
+    }
+
+    .kontakt-left {
+        gap: 10px;
+    }
+
+    .kontakt-infoboks {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 20px 0;
+    }
+
+    .kontakt-right {
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+    }
+
+    #btn-kontakt {
+        margin-top: 20px;
+    }
+
+    .media-tekst-hero {
+        gap: 80px;
+        padding: 200px var(--w-tablet);
+    }
+
+    .tekst-h-hero {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/* media query til desktop */
 @media only screen and (min-width: 1200px) {
+
+    html,
+    body {
+        background-color: var(--hvid);
+        font-size: 18px;
+    }
+
     .hero {
         width: 100%;
         height: 100vh;
@@ -637,7 +811,7 @@ h4 {
     }
 
     p {
-        font-size: 18px;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 400;
         line-height: 28px;
@@ -712,6 +886,17 @@ h4 {
         gap: 10px;
     }
 
+    .kontakt-infoboks {
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 30px 0 0 0;
+        gap: 20px;
+    }
+
+    .kontakt-info {
+        gap: 15px;
+    }
+
     .kontakt-right {
         display: flex;
         flex: 1 1 49%;
@@ -767,91 +952,13 @@ h4 {
 
 }
 
-@media (min-width: 700px) and (max-width: 1199px) {
-    h1 {
-        font-size: 4rem;
-    }
 
-    h2 {
-        font-size: 3rem;
-    }
 
-    h4 {
-        font-size: 1.728rem;
-    }
-
-    p {
-        font-size: 24px;
-        line-height: 38px;
-    }
-
-    .media-tekst {
-        gap: 80px;
-        padding: 100px var(--w-tablet);
-    }
-
-    .tekst-h {
-        width: 100%;
-        gap: 40px;
-    }
-
-    .btn {
-        padding: 15px 60px;
-        font-size: 0.833rem;
-    }
-
-    .quote-sec {
-        padding: 200px var(--w-tablet);
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .galleri {
-        padding: 100px var(--w-tablet);
-        gap: 40px;
-    }
-
-    .kontakt-sec {
-        display: flex;
-        width: 100%;
-        padding: 100px var(--w-tablet);
-        gap: 40px;
-    }
-
-    .kontakt-left {
-        gap: 10px;
-    }
-
-    .kontakt-right {
-        flex-direction: column;
-        width: 100%;
-        gap: 30px;
-    }
-
-    #btn-kontakt {
-        margin-top: 20px;
-    }
-
-    .media-tekst-hero {
-        gap: 80px;
-        padding: 200px var(--w-tablet);
-    }
-
-    .tekst-h-hero {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
-    }
-}
 
 /* Keyframe animations */
 @keyframes fadein-rise {
     from {
-        transform: translateY(50px);
+        transform: translateY(40px);
         opacity: 0;
         scale: 95%;
     }
@@ -875,12 +982,6 @@ h4 {
     }
 }
 
-@keyframes scroll-reveal {
-    to {
-        background-size: 100% 100%;
-    }
-}
-
 @keyframes boxreveal {
     from {
         transform: scaleX(0);
@@ -888,5 +989,15 @@ h4 {
 
     to {
         transform: scaleX(1);
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
