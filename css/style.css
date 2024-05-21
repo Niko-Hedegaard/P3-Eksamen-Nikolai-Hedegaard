@@ -3,8 +3,7 @@
     /* farver */
     --hvid: #EAEAEA;
     --sort: #3F4045;
-    --blaa: #0000FF;
-    --groen-gammel: #0A7968;
+    --blaa: #0061af;
 
     /* skriftstørrelser desktop */
     --w-desk: 15%;
@@ -458,7 +457,7 @@ p {
     color: rgba(234, 234, 234, 1);
 }
 
-h4 {
+h3 {
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -466,7 +465,7 @@ h4 {
     color: var(--hvid);
 }
 
-.quote-sec h4 {
+.quote-sec h3 {
     text-align: right;
 }
 
@@ -681,7 +680,7 @@ h4 {
     width: 50%;
 }
 
-.komp-elem h4 {
+.komp-elem h3 {
     color: var(--sort);
 }
 
@@ -703,7 +702,7 @@ h4 {
         font-size: 2.5rem;
     }
 
-    h4 {
+    h3 {
         font-size: 1.5rem;
     }
 
@@ -806,7 +805,7 @@ h4 {
         font-size: 2.488rem;
     }
 
-    h4 {
+    h3 {
         font-size: 1.728rem;
     }
 
